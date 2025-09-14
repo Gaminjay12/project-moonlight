@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+    height: 25px;
+    background-color: black;
+    border: 1px white solid;
+    user-select: none;
+    box-sizing: border-box;
+    cursor: move
+}
+.window {
+    width: fit-content;
+    height: fit-content;
+    background-color: black;
+    color: white;
+    border: 1px white solid;
+    position: absolute;
+    left: 50px;
+    top: 50px
+}

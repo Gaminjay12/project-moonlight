@@ -1,7 +1,8 @@
-const html = document.documentElement;
+const dev = document.getElementById('debug-opts')
+const html = document.documentElement
 const textbox = document.getElementById('js-textbox');
-
-
+const appearance = html.style
+const show = appearance.display = 'block'
 function runJs() {
     var result = textbox.value
     eval(result)
