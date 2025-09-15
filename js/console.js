@@ -10,7 +10,7 @@ function runJs() {
 const params = new URLSearchParams(window.location.search);
 
 if (params.get('dev') === 'true') {
-  const debugBtn = document.getElementById('debug-opts');
+  const debugBtn = document.getElementById('devOpts');
   if (debugBtn) {
     debugBtn.style.display = 'block';
   }

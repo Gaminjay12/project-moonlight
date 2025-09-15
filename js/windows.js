@@ -24,3 +24,15 @@ headers.forEach(header => {
     document.body.style.userSelect = '';
   });
 });
+
+function toggleWindow(id) {
+  const windowEl = document.getElementById(id);
+  console.log('Toggling window:', id, 'Current display:', windowEl.style.display, 'Computed:', getComputedStyle(windowEl).display);
+  if (windowEl.style.display === 'none' || getComputedStyle(windowEl).display === 'none') {
+    windowEl.style.display = 'block';
+    console.log('Set display to block for', id);
+  } else {
+    windowEl.style.display = 'none';
+    console.log('Set display to none for', id);
+  }}
+

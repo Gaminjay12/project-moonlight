@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
+    <link rel='stylesheet' href="https://www.nerdfonts.com/assets/css/webfont.css">
     <script src="js/console.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/windows.js" defer></script>
+    <script src="js/backgrounds.js" defer></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/windows.css">
-    <title>Project MOONLIGHT</title>
+    <title>Project MoonLight</title>
 </head>
 <body>
     <div class="window" id="js-console">
@@ -21,5 +23,20 @@
             <button onclick="buttonBlack()">Color black</button>
             <button onclick="buttonBlue()">Color blue</button>
         </div>
+    </div>
+    <div class='window' style="display: none" id="settings">
+        <div class="header">Settings</div>
+        <div class="content">
+            <h2>Backgrounds:</p>
+            <button onclick="backgroundBlue()">Blue</button>
+            <button onclick="backgroundBlack()">Black</button>
+            <button onclick="backgroundRed()">Red</button>
+            <button onclick="backgroundGreen()">Green</button>
+            </div>
+        </div>
+    <div class="taskbar">
+        <button class="taskbar-button" onclick="toggleWindow('js-console')"><i class='nf nf-fa-js'> Console</i></button>
+        <button class="taskbar-button" onclick="toggleWindow('debug-opts')" id="devOpts" style="display: none"><i class="nf nf-cod-settings_gear"> DevOpts</i></button>
+        <button class="taskbar-button" onclick="toggleWindow('settings')"><i class='nf nf-cod-settings_gear'> Settings</i></button>
     </div>
 </body>
