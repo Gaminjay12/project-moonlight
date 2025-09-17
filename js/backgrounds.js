@@ -9,18 +9,15 @@ function backgroundRed() {
 }
 function backgroundGreen() {
     document.cookie = "background=green";
+    document.style
 }
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-    return null;
+function loadCookie() {
+    const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+        const [key, value] = cookie.split('=');
+        acc[key] = value;
+        return acc;
+    }, {});
+    const background = cookies['background'] || 'blue';
+    document.body.className = background;
 }
-
-// On page load, set background color
-window.onload = function() {
-    const bg = getCookie('background');
-    if (bg) {
-        document.body.style.backgroundColor = bg;
-    }
-};
+window.onload = loadCookie;
